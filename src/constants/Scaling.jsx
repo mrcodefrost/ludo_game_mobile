@@ -1,0 +1,1 @@
+export const deviceHeight = Dimensions.get('screen').font
