@@ -1,5 +1,8 @@
-import { View, Text, ImageBackground, SafeAreaView } from 'react-native'
-const Wrapper = ({ children }) => {
+import { View, Text, ImageBackground, SafeAreaView, StyleSheet } from 'react-native';
+import React from 'react';
+import BG from '../assets/images/bg.jpg';
+import { deviceHeight, deviceWidth } from '../constants/Scaling';
+const Wrapper = ({ children, style }) => {
     return (
         <ImageBackground
             source={BG}
@@ -7,7 +10,7 @@ const Wrapper = ({ children }) => {
             style={styles.container}
         >
             <SafeAreaView style={[styles.safeArea, {...style}]}>
-                <Text>Wrapper</Text>
+                {children}
             </SafeAreaView>
         </ImageBackground>
     );
@@ -21,6 +24,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     safeArea: {
-        
+        width: deviceWidth,
+        height: deviceHeight,
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })

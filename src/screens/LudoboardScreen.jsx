@@ -1,9 +1,10 @@
 import { View, Text } from 'react-native'
+import Wrapper from '../components/Wrapper'
 const LudoboardScreen = () => {
   return (
-    <View>
+    <Wrapper>
       <Text>LudoboardScreen</Text>
-    </View>
-  )
+    </Wrapper>
+  );
 }
-export default LudoboardScreen
+export default LudoboardScreen;
